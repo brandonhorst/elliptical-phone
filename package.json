@@ -1,0 +1,45 @@
+{
+  "name": "lacona-phrase-phonenumber",
+  "version": "0.0.1",
+  "description": "lacona phrase for matching a phone number",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "pretest": "babel test --out-dir tmp",
+    "test": "mocha tmp",
+    "build": "babel src --out-dir lib",
+    "validate": "npm run build && npm test",
+    "prepublish": "npm run clean && npm run build",
+    "clean": "rimraf lib tmp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brandonhorst/lacona-phrase-email.git"
+  },
+  "keywords": [
+    "lacona",
+    "phrase",
+    "email",
+    "address",
+    "mail"
+  ],
+  "author": "@brandonhorst",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brandonhorst/lacona-phrase-email/issues"
+  },
+  "homepage": "https://github.com/brandonhorst/lacona-phrase-email",
+  "devDependencies": {
+    "babel": "^5.1.9",
+    "chai": "^2.2.0",
+    "lacona": "^0.25.0",
+    "lacona-util-fulltext": "^0.2.0",
+    "mocha": "^2.2.4",
+    "rimraf": "^2.3.2"
+  },
+  "dependencies": {
+    "lacona-phrase": "^0.7.0"
+  }
+}
