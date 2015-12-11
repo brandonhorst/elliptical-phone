@@ -13,14 +13,14 @@ export default class PhoneNumber extends Phrase {
     return /^\+?\(?(\d[ ()/-]{0,2}){0,6}$/.test(input)
   }
 
-  validate (input) {
+  filter (input) {
     return /^\+?\(?(\d[ ()/-]{0,2}){7,15}$/.test(input)
   }
 
   describe() {
     return (
       <argument text='phone number' displayWhen={this.displayWhen}>
-        <freetext validate={this.validate} splitOn={/\w/} />
+        <freetext validate={this.filter} splitOn={/\w/} />
       </argument>
     )
   }
