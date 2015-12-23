@@ -35,7 +35,6 @@
     "babel": "^5.8.34",
     "chai": "^3.4.1",
     "lacona": "^0.33.1",
-    "lacona-util-fulltext": "^0.2.0",
     "lodash": "^3.10.1",
     "mocha": "^2.3.4",
     "rimraf": "^2.5.0"
