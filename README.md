@@ -1,4 +1,4 @@
-# lacona-phrase-phoneNumber
+# lacona-phrase-phone-number
 
 [![Build Status](https://travis-ci.org/lacona/lacona-phrase-phone-number.svg?branch=master)](https://travis-ci.org/lacona/lacona-phrase-phone-number)
 
@@ -37,7 +37,7 @@ parser.parseArray('call +1 617 8675309')
 
 ## Reference
 
-### `PhoneNUmber`
+### `PhoneNumber`
 
 Matches standard phone numbers. These can optional start with a +, and then can have parenthesis and dashes. The actual structure is not mandated.
 
