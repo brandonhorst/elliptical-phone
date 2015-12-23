@@ -1,7 +1,10 @@
 /** @jsx createElement */
 import {createElement, Phrase} from 'lacona-phrase'
 
-export default class PhoneNumber extends Phrase {
+export class PhoneNumber extends Phrase {
+  static defaultProps = {
+    argument: 'phone number'
+  }
 
   getValue (result) {
     if (!result) return
@@ -9,7 +12,7 @@ export default class PhoneNumber extends Phrase {
     return result.replace(/[ ()/-]/g, '')
   }
 
-  displayWhen (input) {
+  suppressWhen (input) {
     return /^\+?\(?(\d[ ()/-]{0,2}){0,6}$/.test(input)
   }
 
@@ -19,9 +22,11 @@ export default class PhoneNumber extends Phrase {
 
   describe() {
     return (
-      <argument text='phone number' displayWhen={this.displayWhen}>
-        <freetext validate={this.filter} splitOn={/\w/} />
-      </argument>
+      <map function={this.getValue}>
+        <label text={this.props.argument} suppressWhen={this.suppressWhen}>
+          <freetext filter={this.filter} splitOn={/[^0-9()+-]/} />
+        </label>
+      </map>
     )
   }
 }
