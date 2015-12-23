@@ -1,5 +1,5 @@
 {
-  "name": "lacona-phrase-phonenumber",
+  "name": "lacona-phrase-phone-number",
   "version": "0.2.0",
   "description": "lacona phrase for matching a phone number",
   "main": "lib/index.js",
@@ -16,21 +16,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/brandonhorst/lacona-phrase-email.git"
+    "url": "https://github.com/brandonhorst/lacona-phrase-phone-number.git"
   },
   "keywords": [
     "lacona",
-    "phrase",
-    "email",
-    "address",
-    "mail"
+    "phone",
+    "phonenumber",
+    "phone number",
+    "number"
   ],
   "author": "@brandonhorst",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/brandonhorst/lacona-phrase-email/issues"
+    "url": "https://github.com/brandonhorst/lacona-phrase-phone-number/issues"
   },
-  "homepage": "https://github.com/brandonhorst/lacona-phrase-email",
+  "homepage": "https://github.com/brandonhorst/lacona-phrase-phone-number",
   "devDependencies": {
     "babel": "^5.8.34",
     "chai": "^3.4.1",
