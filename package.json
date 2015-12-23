@@ -1,6 +1,6 @@
 {
   "name": "lacona-phrase-phone-number",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "lacona phrase for matching a phone number",
   "main": "lib/index.js",
   "directories": {
