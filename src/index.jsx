@@ -6,12 +6,6 @@ export class PhoneNumber extends Phrase {
     argument: 'phone number'
   }
 
-  getValue (result) {
-    if (!result) return
-
-    return result.replace(/[ ()/-]/g, '')
-  }
-
   suppressWhen (input) {
     return /^\+?\(?(\d[ ()/-]{0,2}){0,6}$/.test(input)
   }
@@ -22,11 +16,9 @@ export class PhoneNumber extends Phrase {
 
   describe() {
     return (
-      <map function={this.getValue}>
-        <label text={this.props.argument} suppressWhen={this.suppressWhen}>
-          <freetext filter={this.filter} splitOn={/[^0-9()+-]/} />
-        </label>
-      </map>
+      <label text={this.props.argument} suppressWhen={this.suppressWhen}>
+        <freetext filter={this.filter} splitOn={/[^0-9()+-]/} />
+      </label>
     )
   }
 }

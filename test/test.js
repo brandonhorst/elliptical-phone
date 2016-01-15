@@ -24,7 +24,7 @@ describe('PhoneNumber', () => {
     const data1 = parser.parseArray('+1 (123) 123-1243')
     expect(data1).to.have.length(1)
     expect(text(data1[0])).to.equal('+1 (123) 123-1243')
-    expect(data1[0].result).to.equal('+11231231243')
+    expect(data1[0].result).to.equal('+1 (123) 123-1243')
 
     const data2 = parser.parseArray('7897896789')
     expect(data2).to.have.length(1)
