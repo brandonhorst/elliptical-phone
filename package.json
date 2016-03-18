@@ -1,25 +1,23 @@
 {
-  "name": "lacona-phrase-phone-number",
+  "name": "elliptical-phone",
   "version": "0.3.0",
-  "description": "lacona phrase for matching a phone number",
+  "description": "elliptical phrase for matching a phone number",
   "main": "lib/index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "pretest": "babel --stage 0 test --out-dir tmp",
-    "test": "mocha tmp",
-    "build": "babel --stage 0 src --out-dir lib",
-    "validate": "npm run build && npm test",
-    "prepublish": "npm run clean && npm run build",
-    "clean": "rimraf lib tmp"
+    "test": "mocha --compilers jsx:babel-register --watch-extensions jsx",
+    "build": "mkdir -p build; babel src --out-dir lib",
+    "clean": "rimraf lib",
+    "prepublish": "npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/brandonhorst/lacona-phrase-phone-number.git"
+    "url": "https://github.com/brandonhorst/elliptical-phone.git"
   },
   "keywords": [
-    "lacona",
+    "elliptical",
     "phone",
     "phonenumber",
     "phone number",
@@ -28,18 +26,28 @@
   "author": "@brandonhorst",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/brandonhorst/lacona-phrase-phone-number/issues"
+    "url": "https://github.com/brandonhorst/elliptical-phone/issues"
   },
-  "homepage": "https://github.com/brandonhorst/lacona-phrase-phone-number",
+  "homepage": "https://github.com/brandonhorst/elliptical-phone",
   "devDependencies": {
-    "babel": "^5.8.34",
-    "chai": "^3.4.1",
-    "lacona": "^0.33.1",
-    "lodash": "^3.10.1",
-    "mocha": "^2.3.4",
-    "rimraf": "^2.5.0"
+    "babel-cli": "^6.6.5",
+    "babel-plugin-transform-react-jsx": "^6.6.5",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-register": "^6.7.2",
+    "chai": "^3.5.0",
+    "lodash": "^4.6.1",
+    "mocha": "^2.4.5",
+    "rimraf": "^2.5.2"
   },
   "dependencies": {
-    "lacona-phrase": "^0.9.1"
+    "elliptical": "^1.0.0-rc4"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "transform-react-jsx"
+    ]
   }
 }

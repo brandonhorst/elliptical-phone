@@ -1,24 +1,24 @@
 /** @jsx createElement */
-import {createElement, Phrase} from 'lacona-phrase'
+import {createElement} from 'elliptical'
 
-export class PhoneNumber extends Phrase {
-  static defaultProps = {
-    argument: 'phone number'
-  }
-
-  suppressWhen (input) {
-    return /^\+?\(?(\d[ ()/-]{0,2}){0,6}$/.test(input)
-  }
-
-  filter (input) {
-    return /^\+?\(?(\d[ ()/-]{0,2}){7,15}$/.test(input)
-  }
-
-  describe() {
-    return (
-      <label text={this.props.argument} suppressWhen={this.suppressWhen}>
-        <freetext filter={this.filter} splitOn={/[^0-9()+-]/} />
-      </label>
-    )
-  }
+const defaultProps = {
+  argument: 'phone number'
 }
+
+function suppressWhen (input) {
+  return /^\+?\(?(\d[ ()/-]{0,2}){0,6}$/.test(input)
+}
+
+function filter (input) {
+  return /^\+?\(?(\d[ ()/-]{0,2}){7,15}$/.test(input)
+}
+
+function describe ({props}) {
+  return (
+    <label text={props.argument} suppressWhen={suppressWhen}>
+      <freetext filter={filter} splitOn={/[^0-9()+-]/} />
+    </label>
+  )
+}
+
+export default {defaultProps, describe}
