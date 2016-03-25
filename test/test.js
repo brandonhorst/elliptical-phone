@@ -2,9 +2,9 @@
 /* eslint-env mocha */
 
 import _ from 'lodash'
-import { createElement, compile } from 'elliptical'
-import PhoneNumber from '../src/index'
-import { expect } from 'chai'
+import {createElement, compile} from 'elliptical'
+import {PhoneNumber} from '../src/index'
+import {expect} from 'chai'
 
 function text(input) {
   return _.map(input.words, 'text').join('')

@@ -21,4 +21,4 @@ function describe ({props}) {
   )
 }
 
-export default {defaultProps, describe}
+export const PhoneNumber = {defaultProps, describe}
