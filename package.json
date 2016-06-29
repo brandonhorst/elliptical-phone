@@ -40,7 +40,7 @@
     "rimraf": "^2.5.2"
   },
   "dependencies": {
-    "elliptical": "^1.0.0-rc4"
+    "elliptical": "^1.0.0-rc16"
   },
   "babel": {
     "presets": [

@@ -15,9 +15,9 @@ function filter (input) {
 
 function describe ({props}) {
   return (
-    <label text={props.argument} suppressWhen={suppressWhen}>
+    <placeholder text={props.argument} suppressWhen={suppressWhen}>
       <freetext filter={filter} splitOn={/[^0-9()+-]/} />
-    </label>
+    </placeholder>
   )
 }
 
