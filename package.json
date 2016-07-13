@@ -1,6 +1,6 @@
 {
   "name": "elliptical-phone",
-  "version": "1.0.0-rc3",
+  "version": "1.0.0",
   "description": "elliptical phrase for matching a phone number",
   "main": "lib/index.js",
   "directories": {
