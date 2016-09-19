@@ -24,4 +24,4 @@ function describe ({props}) {
   )
 }
 
-export const PhoneNumber = {describe, defaultProps}
+export const PhoneNumber = {describe, defaultProps, id: 'elliptical-phone:PhoneNumber'}
